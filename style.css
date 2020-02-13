@@ -1,0 +1,179 @@
+:root {
+	/* Theme colors are based upon style of clothing I wear. 
+	Makes it easy on me so I just look at what I'm wearing and go from there.
+	Today was a winter day so I went for darker colors */
+	--dark-purple: #56145c;
+	--pitch-black: #171616;
+	--accent-black: #393939;
+	--blue-grey: #7885b6;
+	--green-grey: #b8c2b8;
+	/* Other themes will be set in as I wear more clothes and work on this.
+	This is done so that also people can adjust the themes on my site */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--accent-black);
+	color: white;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 2.5vh;
+}
+
+.jump-tos {
+	display: flex;
+	width: 45%;
+	border: 1px solid white;
+	justify-content: space-between;
+}
+
+.jump-tos a {
+	padding: 1.5vh;
+	color: white;
+}
+
+a {
+	color: var(--blue-grey);
+}
+
+#welcome {
+	text-align: center;
+	transition: ease-in;
+	height: 85vh;
+	width: 100%;
+	background-color: var(--dark-purple);
+}
+
+.about-column-divide {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.about-info {
+	padding: 1vh 2.5vw;
+	margin: 1vh 5vw;
+	border: 1px outset var(--dark-purple);
+}
+
+#projects-container {
+	transition: ease-in;
+	display: flex;
+	flex-direction: row;
+}
+
+.card {
+	transition: .2s ease-in;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--blue-grey);
+	justify-content: space-between;
+	text-align: center;
+	width: 30%;
+	margin: 2.5%;
+	box-shadow: grey 5px 5px 5px;
+}
+
+.card:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.card-top {
+	border-bottom: 1px solid black;
+}
+
+.card-middle {
+	margin: 5%;
+	width: 90%;
+}
+
+.card-bottom {
+	border-top: 1px solid grey;
+}
+
+#skills-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.skill-container-cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.skills-holder {
+	width: 45%;
+	border: 1px dotted white;
+	margin: 2.25%;
+	transition: ease-in;
+}
+
+.skills-title {
+	text-align: center;
+}
+
+.skills-deck {
+	/* This is the skills that the cards are in */
+	background-color: var(--blue-grey);
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.skill-card {
+	min-width: 35%;
+	max-width: 45%;
+	padding: 1vh;
+	margin: 1vh;
+	background-color: var(--accent-black);
+	text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+	#projects-container {
+		flex-direction: column;
+	}
+
+	.card {
+		width: 90%;
+		margin: 2.5% 5% 2.5% 5%;
+	}
+
+	.skill-container-cards {
+		flex-direction: column;
+	}
+
+	.skills-holder {
+		width: 90%;
+		margin: auto;
+	}
+
+	.skills-deck {
+		flex-direction: column;
+	}
+
+	.skill-card {
+		min-width: 80%;
+		max-width: 80%;
+		align-self: center;
+	}
+}
+
+#welcome,
+#about-container,
+#projects-container,
+#skills-container,
+#contact-container {
+	scroll-behavior: smooth;
+}
